@@ -12,16 +12,39 @@
 
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
-  <title>Hello app</title>
+  <title>Create Customer</title>
 </head>
 
+<style>
+  body {
+    background-color: lightblue;
+  }
+</style>
+
 <body>
-  <h1>Hello</h1>
-  <div id="app">
-    <input v-model="name" placeholder="Name">
-    <button v-on:click="sayHello()" class="btn btn-primary">Say hello</button>
-    <div>{{ greeting }}</div>
+  <div class="jumbotron jumbotron-fluid" style="color: white; background-color: rgb(28, 16, 190);">
+    <div class="container">
+      <h1><strong>eKunder</strong></h1>
+      <p>Her kan du skabe din kunde</p>
+    </div>
   </div>
+  <div id="app">
+    <h2 style="margin: 25px 20px 25px 425px;">Skab en kunde</h2>
+    <input v-model="addData.name" placeholder="navn" type="text" />
+    <input v-model="addData.email" placeholder="e-mail" type="text" />
+    <input v-model="addData.addresse" placeholder="adresse" type="text" />
+    <input v-model="addData.townCity" placeholder="by" type="text" />
+    <input v-model="addData.country" placeholder="land" type="text" />
+    <input v-model.number="addData.postNr" placeholder="postnummer" type="number" />
+    <input v-model.number="addData.telefonNr" placeholder="telefonnummer" type="number" />
+    <input v-model="addData.currency" placeholder="valuta" type="text" />
+    <input v-model.number="addData.cvr" placeholder="CVR" type="number" />
+    <input v-model="addData.publicEntry" placeholder="dato" type="date" />
+    <button v-on:click="addCustomer()" class="btn btn-success">Create</button>
+    <div>{{addMessage}}</div>
+  </div>
+
+  <Button onclick="document.location= 'https://ecustomer.azurewebsites.net/'" class="btn btn-success">Info</button>
 
   <script src="bundle.js"></script>
 </body>
