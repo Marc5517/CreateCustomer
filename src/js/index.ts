@@ -13,7 +13,6 @@ interface ICustomer {
     telefonNr: number
     currency: string
     cvr: number
-    public: Date
 }
 
 // use https (http secure).
@@ -26,7 +25,7 @@ new Vue({
     // which is included at the bottom of the html file.
     el: "#app",
     data: {
-        addData: { name: "", email: "", addresse: "", townCity: "", country: "", postNr: 0, telefonNr: 0, currency: "", cvr: 0, publicEntry: 0},
+        addData: { name: "", email: "", addresse: "", townCity: "", country: "", postNr: 0, telefonNr: 0, currency: "", cvr: 0},
         addMessage: ""
     },
     methods: {
