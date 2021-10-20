@@ -29,6 +29,7 @@ new Vue({
         addMessage: ""
     },
     methods: {
+        // Skaber en kunde til databasen, så længe værdierne til kunden er sat ind, og URL'en er brugt.
         addCustomer() {
             axios.post<ICustomer>(baseUrl, this.addData)
                 .then((response: AxiosResponse) => {
